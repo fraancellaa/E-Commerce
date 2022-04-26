@@ -13,14 +13,14 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      auto_increment: true
+      autoIncrement: true
     },
     product_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(10,2),
       allowNull: false,
       // validate if the input is indeed a decimal
       validate: {
