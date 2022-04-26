@@ -13,19 +13,19 @@ Product.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      auto_increment: true,
+      auto_increment: true
     },
     product_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
     price: {
-      type: DataTypes.DECIMAL(10,2),
+      type: DataTypes.DECIMAL,
       allowNull: false,
       // validate if the input is indeed a decimal
       validate: {
       isDecimal: true
-    },
+    }
     },
     stock: {
       type: DataTypes.INTEGER,
@@ -34,7 +34,7 @@ Product.init(
       // validates that the input is a numerical value
       validate: {
         isNumeric: true
-      },
+      }
     },
     category_id: {
       type: DataTypes.INTEGER,
